@@ -1,0 +1,255 @@
+<html>
+<head>
+<title>LearnActivity4.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,128,0); font-weight: bold; }
+.s4 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+LearnActivity4.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<a name="l1"><span class="ln">1    </span></a><span class="s0">package </span><span class="s1">com.example.anonymus.e_adhyay; 
+<a name="l2"><span class="ln">2    </span></a> 
+<a name="l3"><span class="ln">3    </span></a> 
+<a name="l4"><span class="ln">4    </span></a></span><span class="s0">import </span><span class="s1">android.annotation.TargetApi; 
+<a name="l5"><span class="ln">5    </span></a></span><span class="s0">import </span><span class="s1">android.content.Intent; 
+<a name="l6"><span class="ln">6    </span></a></span><span class="s0">import </span><span class="s1">android.graphics.Color; 
+<a name="l7"><span class="ln">7    </span></a></span><span class="s0">import </span><span class="s1">android.os.Build; 
+<a name="l8"><span class="ln">8    </span></a></span><span class="s0">import </span><span class="s1">android.os.Bundle; 
+<a name="l9"><span class="ln">9    </span></a></span><span class="s0">import </span><span class="s1">android.app.Activity; 
+<a name="l10"><span class="ln">10   </span></a></span><span class="s0">import </span><span class="s1">android.support.v7.app.ActionBar; 
+<a name="l11"><span class="ln">11   </span></a></span><span class="s0">import </span><span class="s1">android.view.Gravity; 
+<a name="l12"><span class="ln">12   </span></a></span><span class="s0">import </span><span class="s1">android.view.Menu; 
+<a name="l13"><span class="ln">13   </span></a></span><span class="s0">import </span><span class="s1">java.util.Locale; 
+<a name="l14"><span class="ln">14   </span></a> 
+<a name="l15"><span class="ln">15   </span></a></span><span class="s0">import </span><span class="s1">android.app.Activity; 
+<a name="l16"><span class="ln">16   </span></a></span><span class="s0">import </span><span class="s1">android.os.Bundle; 
+<a name="l17"><span class="ln">17   </span></a></span><span class="s0">import </span><span class="s1">android.support.v7.app.AppCompatActivity; 
+<a name="l18"><span class="ln">18   </span></a></span><span class="s0">import </span><span class="s1">android.speech.tts.TextToSpeech; 
+<a name="l19"><span class="ln">19   </span></a></span><span class="s0">import </span><span class="s1">android.util.Log; 
+<a name="l20"><span class="ln">20   </span></a></span><span class="s0">import </span><span class="s1">android.view.View; 
+<a name="l21"><span class="ln">21   </span></a></span><span class="s0">import </span><span class="s1">android.view.Window; 
+<a name="l22"><span class="ln">22   </span></a></span><span class="s0">import </span><span class="s1">android.view.WindowManager; 
+<a name="l23"><span class="ln">23   </span></a></span><span class="s0">import </span><span class="s1">android.view.animation.Animation; 
+<a name="l24"><span class="ln">24   </span></a></span><span class="s0">import </span><span class="s1">android.view.animation.AnimationUtils; 
+<a name="l25"><span class="ln">25   </span></a></span><span class="s0">import </span><span class="s1">android.widget.Button; 
+<a name="l26"><span class="ln">26   </span></a></span><span class="s2">//import android.widget.EditText;</span><span class="s1"> 
+<a name="l27"><span class="ln">27   </span></a></span><span class="s0">import </span><span class="s1">android.widget.ImageButton; 
+<a name="l28"><span class="ln">28   </span></a></span><span class="s0">import </span><span class="s1">android.widget.ImageSwitcher; 
+<a name="l29"><span class="ln">29   </span></a></span><span class="s0">import </span><span class="s1">android.widget.ImageView; 
+<a name="l30"><span class="ln">30   </span></a></span><span class="s0">import </span><span class="s1">android.widget.RelativeLayout; 
+<a name="l31"><span class="ln">31   </span></a></span><span class="s0">import </span><span class="s1">android.widget.TextSwitcher; 
+<a name="l32"><span class="ln">32   </span></a></span><span class="s0">import </span><span class="s1">android.widget.TextView; 
+<a name="l33"><span class="ln">33   </span></a></span><span class="s0">import </span><span class="s1">android.widget.ViewSwitcher; 
+<a name="l34"><span class="ln">34   </span></a> 
+<a name="l35"><span class="ln">35   </span></a></span><span class="s0">public class </span><span class="s1">LearnActivity4 </span><span class="s0">extends </span><span class="s1">AppCompatActivity </span><span class="s0">implements</span><span class="s1"> 
+<a name="l36"><span class="ln">36   </span></a>        TextToSpeech.OnInitListener { 
+<a name="l37"><span class="ln">37   </span></a>    </span><span class="s2">/** Called when the activity is first created. */</span><span class="s1"> 
+<a name="l38"><span class="ln">38   </span></a> 
+<a name="l39"><span class="ln">39   </span></a>    </span><span class="s0">private </span><span class="s1">TextToSpeech tts; 
+<a name="l40"><span class="ln">40   </span></a>    </span><span class="s0">private </span><span class="s1">ImageButton buttonSpeak; 
+<a name="l41"><span class="ln">41   </span></a>    ImageSwitcher imageSwitcher; 
+<a name="l42"><span class="ln">42   </span></a>    TextSwitcher simpleTextSwitcher; 
+<a name="l43"><span class="ln">43   </span></a>    ImageButton nextButton,prevButton; 
+<a name="l44"><span class="ln">44   </span></a>    RelativeLayout r1; 
+<a name="l45"><span class="ln">45   </span></a>    </span><span class="s0">int </span><span class="s1">imageSwitcherImages[] = 
+<a name="l46"><span class="ln">46   </span></a>            {R.drawable.o,R.drawable.a,R.drawable.p,R.drawable.m,R.drawable.st}; 
+<a name="l47"><span class="ln">47   </span></a>    String strings[] = {</span><span class="s3">&quot;Orange&quot;</span><span class="s1">, </span><span class="s3">&quot;Apple&quot;</span><span class="s1">,</span><span class="s3">&quot;Peach&quot;</span><span class="s1">,</span><span class="s3">&quot;Mango&quot;</span><span class="s1">,</span><span class="s3">&quot;Strawberry&quot;</span><span class="s1">}; 
+<a name="l48"><span class="ln">48   </span></a>    </span><span class="s0">int </span><span class="s1">messageCount = strings.length; 
+<a name="l49"><span class="ln">49   </span></a>    </span><span class="s0">int </span><span class="s1">switcherImageLength = imageSwitcherImages.length; 
+<a name="l50"><span class="ln">50   </span></a>    </span><span class="s0">int </span><span class="s1">counter = </span><span class="s4">0</span><span class="s1">; 
+<a name="l51"><span class="ln">51   </span></a>    </span><span class="s0">int </span><span class="s1">counter1=</span><span class="s4">0</span><span class="s1">; 
+<a name="l52"><span class="ln">52   </span></a>    </span><span class="s2">//  private EditText editText;</span><span class="s1"> 
+<a name="l53"><span class="ln">53   </span></a> 
+<a name="l54"><span class="ln">54   </span></a> 
+<a name="l55"><span class="ln">55   </span></a>    @Override 
+<a name="l56"><span class="ln">56   </span></a>    </span><span class="s0">public void </span><span class="s1">onCreate(Bundle savedInstanceState) { 
+<a name="l57"><span class="ln">57   </span></a>        </span><span class="s0">super</span><span class="s1">.onCreate(savedInstanceState); 
+<a name="l58"><span class="ln">58   </span></a>        </span><span class="s0">if </span><span class="s1">(Build.VERSION.SDK_INT &gt;= </span><span class="s4">21</span><span class="s1">) { 
+<a name="l59"><span class="ln">59   </span></a>            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN); 
+<a name="l60"><span class="ln">60   </span></a>        } 
+<a name="l61"><span class="ln">61   </span></a>        </span><span class="s0">if </span><span class="s1">(Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.LOLLIPOP) { 
+<a name="l62"><span class="ln">62   </span></a>            Window window = getWindow(); 
+<a name="l63"><span class="ln">63   </span></a>            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS); 
+<a name="l64"><span class="ln">64   </span></a>            window.setStatusBarColor(Color.TRANSPARENT); 
+<a name="l65"><span class="ln">65   </span></a>        } 
+<a name="l66"><span class="ln">66   </span></a>        setContentView(R.layout.activity4_learn); 
+<a name="l67"><span class="ln">67   </span></a> 
+<a name="l68"><span class="ln">68   </span></a>        tts = </span><span class="s0">new </span><span class="s1">TextToSpeech(</span><span class="s0">this</span><span class="s1">, </span><span class="s0">this</span><span class="s1">); 
+<a name="l69"><span class="ln">69   </span></a>        buttonSpeak = (ImageButton) findViewById(R.id.button1); 
+<a name="l70"><span class="ln">70   </span></a> 
+<a name="l71"><span class="ln">71   </span></a> 
+<a name="l72"><span class="ln">72   </span></a>        r1=(RelativeLayout)findViewById(R.id.r1); 
+<a name="l73"><span class="ln">73   </span></a>        imageSwitcher = (ImageSwitcher) findViewById(R.id.imageSwitcher); 
+<a name="l74"><span class="ln">74   </span></a>        nextButton = (ImageButton) findViewById(R.id.button); 
+<a name="l75"><span class="ln">75   </span></a>        prevButton = (ImageButton) findViewById(R.id.button2); 
+<a name="l76"><span class="ln">76   </span></a>        imageSwitcher.setFactory(</span><span class="s0">new </span><span class="s1">ViewSwitcher.ViewFactory() { 
+<a name="l77"><span class="ln">77   </span></a>            @Override 
+<a name="l78"><span class="ln">78   </span></a>            </span><span class="s0">public </span><span class="s1">View makeView() { 
+<a name="l79"><span class="ln">79   </span></a>                ImageView switcherImageView = </span><span class="s0">new </span><span class="s1">ImageView(getApplicationContext()); 
+<a name="l80"><span class="ln">80   </span></a>                switcherImageView.setLayoutParams(</span><span class="s0">new </span><span class="s1">ImageSwitcher.LayoutParams( 
+<a name="l81"><span class="ln">81   </span></a>                        ActionBar.LayoutParams.FILL_PARENT, ActionBar.LayoutParams.FILL_PARENT 
+<a name="l82"><span class="ln">82   </span></a>                )); 
+<a name="l83"><span class="ln">83   </span></a>                switcherImageView.setScaleType(ImageView.ScaleType.FIT_CENTER); 
+<a name="l84"><span class="ln">84   </span></a>                switcherImageView.setImageResource(imageSwitcherImages[counter]); 
+<a name="l85"><span class="ln">85   </span></a>                </span><span class="s2">//switcherImageView.setMaxHeight(100);</span><span class="s1"> 
+<a name="l86"><span class="ln">86   </span></a>                </span><span class="s0">return </span><span class="s1">switcherImageView; 
+<a name="l87"><span class="ln">87   </span></a>            } 
+<a name="l88"><span class="ln">88   </span></a>        }); 
+<a name="l89"><span class="ln">89   </span></a> 
+<a name="l90"><span class="ln">90   </span></a>        Animation aniOut = AnimationUtils.loadAnimation(</span><span class="s0">this</span><span class="s1">, android.R.anim.fade_out); 
+<a name="l91"><span class="ln">91   </span></a>        Animation aniIn = AnimationUtils.loadAnimation(</span><span class="s0">this</span><span class="s1">, android.R.anim.fade_in); 
+<a name="l92"><span class="ln">92   </span></a> 
+<a name="l93"><span class="ln">93   </span></a>        imageSwitcher.setOutAnimation(aniOut); 
+<a name="l94"><span class="ln">94   </span></a>        imageSwitcher.setInAnimation(aniIn); 
+<a name="l95"><span class="ln">95   </span></a>        simpleTextSwitcher = (TextSwitcher) findViewById(R.id.simpleTextSwitcher); 
+<a name="l96"><span class="ln">96   </span></a>        </span><span class="s2">// Set the ViewFactory of the TextSwitcher that will create TextView object when asked</span><span class="s1"> 
+<a name="l97"><span class="ln">97   </span></a>        simpleTextSwitcher.setFactory(</span><span class="s0">new </span><span class="s1">ViewSwitcher.ViewFactory() { 
+<a name="l98"><span class="ln">98   </span></a> 
+<a name="l99"><span class="ln">99   </span></a>            </span><span class="s0">public </span><span class="s1">View makeView() { 
+<a name="l100"><span class="ln">100  </span></a>                </span><span class="s2">// TODO Auto-generated method stub</span><span class="s1"> 
+<a name="l101"><span class="ln">101  </span></a>                </span><span class="s2">// create a TextView</span><span class="s1"> 
+<a name="l102"><span class="ln">102  </span></a>                TextView t = </span><span class="s0">new </span><span class="s1">TextView(LearnActivity4.</span><span class="s0">this</span><span class="s1">); 
+<a name="l103"><span class="ln">103  </span></a>                </span><span class="s2">// set the gravity of text to top and center horizontal</span><span class="s1"> 
+<a name="l104"><span class="ln">104  </span></a>                t.setGravity(Gravity.TOP | Gravity.CENTER_HORIZONTAL); 
+<a name="l105"><span class="ln">105  </span></a>                </span><span class="s2">// set displayed text size</span><span class="s1"> 
+<a name="l106"><span class="ln">106  </span></a>                t.setTextSize(</span><span class="s4">50</span><span class="s1">); 
+<a name="l107"><span class="ln">107  </span></a> 
+<a name="l108"><span class="ln">108  </span></a> 
+<a name="l109"><span class="ln">109  </span></a>                t.setTextColor(Color.rgb(</span><span class="s4">255</span><span class="s1">,</span><span class="s4">255</span><span class="s1">,</span><span class="s4">255</span><span class="s1">)); 
+<a name="l110"><span class="ln">110  </span></a>                </span><span class="s0">return </span><span class="s1">t; 
+<a name="l111"><span class="ln">111  </span></a>            } 
+<a name="l112"><span class="ln">112  </span></a>        }); 
+<a name="l113"><span class="ln">113  </span></a> 
+<a name="l114"><span class="ln">114  </span></a>        </span><span class="s2">// Declare in and out animations and load them using AnimationUtils class</span><span class="s1"> 
+<a name="l115"><span class="ln">115  </span></a>        Animation in = AnimationUtils.loadAnimation(</span><span class="s0">this</span><span class="s1">, android.R.anim.slide_in_left); 
+<a name="l116"><span class="ln">116  </span></a>        Animation out = AnimationUtils.loadAnimation(</span><span class="s0">this</span><span class="s1">, android.R.anim.slide_out_right); 
+<a name="l117"><span class="ln">117  </span></a> 
+<a name="l118"><span class="ln">118  </span></a>        </span><span class="s2">// set the animation type to TextSwitcher</span><span class="s1"> 
+<a name="l119"><span class="ln">119  </span></a>        simpleTextSwitcher.setInAnimation(in); 
+<a name="l120"><span class="ln">120  </span></a>        simpleTextSwitcher.setOutAnimation(out); 
+<a name="l121"><span class="ln">121  </span></a> 
+<a name="l122"><span class="ln">122  </span></a>        </span><span class="s2">//text appear on start</span><span class="s1"> 
+<a name="l123"><span class="ln">123  </span></a> 
+<a name="l124"><span class="ln">124  </span></a>        simpleTextSwitcher.setText(strings[counter]); 
+<a name="l125"><span class="ln">125  </span></a>        nextButton.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+<a name="l126"><span class="ln">126  </span></a>            </span><span class="s2">/*   @TargetApi(Build.VERSION_CODES.JELLY_BEAN) 
+<a name="l127"><span class="ln">127  </span></a>               @android.support.annotation.RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)*/</span><span class="s1"> 
+<a name="l128"><span class="ln">128  </span></a>            @Override 
+<a name="l129"><span class="ln">129  </span></a>            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+<a name="l130"><span class="ln">130  </span></a> 
+<a name="l131"><span class="ln">131  </span></a>                counter++; 
+<a name="l132"><span class="ln">132  </span></a>                </span><span class="s0">if </span><span class="s1">(counter == switcherImageLength) { 
+<a name="l133"><span class="ln">133  </span></a>                    counter = </span><span class="s4">0</span><span class="s1">; 
+<a name="l134"><span class="ln">134  </span></a>                    imageSwitcher.setImageResource(imageSwitcherImages[counter]); 
+<a name="l135"><span class="ln">135  </span></a>                    simpleTextSwitcher.setText(strings[counter]); 
+<a name="l136"><span class="ln">136  </span></a>                } </span><span class="s0">else </span><span class="s1">{ 
+<a name="l137"><span class="ln">137  </span></a>                    imageSwitcher.setImageResource(imageSwitcherImages[counter]); 
+<a name="l138"><span class="ln">138  </span></a>                    simpleTextSwitcher.setText(strings[counter]); 
+<a name="l139"><span class="ln">139  </span></a>                    </span><span class="s2">//  r1.setBackgroundColor(Color.rgb(200,100,230));</span><span class="s1"> 
+<a name="l140"><span class="ln">140  </span></a>                    </span><span class="s2">// r1.setBackgroundResource();</span><span class="s1"> 
+<a name="l141"><span class="ln">141  </span></a>                    </span><span class="s2">// buttonSpeak.setBackgroundResource();</span><span class="s1"> 
+<a name="l142"><span class="ln">142  </span></a>                } 
+<a name="l143"><span class="ln">143  </span></a>                buttonSpeak.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+<a name="l144"><span class="ln">144  </span></a>                    @Override 
+<a name="l145"><span class="ln">145  </span></a>                    </span><span class="s0">public void </span><span class="s1">onClick(View arg0) { 
+<a name="l146"><span class="ln">146  </span></a>                        speakOut(strings[counter]); 
+<a name="l147"><span class="ln">147  </span></a>                    } 
+<a name="l148"><span class="ln">148  </span></a> 
+<a name="l149"><span class="ln">149  </span></a>                }); 
+<a name="l150"><span class="ln">150  </span></a> 
+<a name="l151"><span class="ln">151  </span></a>            } 
+<a name="l152"><span class="ln">152  </span></a>        }); 
+<a name="l153"><span class="ln">153  </span></a>        prevButton.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+<a name="l154"><span class="ln">154  </span></a>            </span><span class="s2">/*   @TargetApi(Build.VERSION_CODES.JELLY_BEAN) 
+<a name="l155"><span class="ln">155  </span></a>               @android.support.annotation.RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)*/</span><span class="s1"> 
+<a name="l156"><span class="ln">156  </span></a>            @Override 
+<a name="l157"><span class="ln">157  </span></a>            </span><span class="s0">public void </span><span class="s1">onClick(View v) { 
+<a name="l158"><span class="ln">158  </span></a> 
+<a name="l159"><span class="ln">159  </span></a>                counter1--; 
+<a name="l160"><span class="ln">160  </span></a>                </span><span class="s0">if </span><span class="s1">(counter1 == -</span><span class="s4">1</span><span class="s1">) { 
+<a name="l161"><span class="ln">161  </span></a>                    counter1 = switcherImageLength-</span><span class="s4">1</span><span class="s1">; 
+<a name="l162"><span class="ln">162  </span></a>                    imageSwitcher.setImageResource(imageSwitcherImages[counter1]); 
+<a name="l163"><span class="ln">163  </span></a>                    simpleTextSwitcher.setText(strings[counter1]); 
+<a name="l164"><span class="ln">164  </span></a>                } </span><span class="s0">else </span><span class="s1">{ 
+<a name="l165"><span class="ln">165  </span></a>                    imageSwitcher.setImageResource(imageSwitcherImages[counter1]); 
+<a name="l166"><span class="ln">166  </span></a>                    simpleTextSwitcher.setText(strings[counter1]); 
+<a name="l167"><span class="ln">167  </span></a>                    </span><span class="s2">//  r1.setBackgroundColor(Color.rgb(200,100,230));</span><span class="s1"> 
+<a name="l168"><span class="ln">168  </span></a>                    </span><span class="s2">// r1.setBackgroundResource();</span><span class="s1"> 
+<a name="l169"><span class="ln">169  </span></a>                    </span><span class="s2">// buttonSpeak.setBackgroundResource();</span><span class="s1"> 
+<a name="l170"><span class="ln">170  </span></a>                } 
+<a name="l171"><span class="ln">171  </span></a>                buttonSpeak.setOnClickListener(</span><span class="s0">new </span><span class="s1">View.OnClickListener() { 
+<a name="l172"><span class="ln">172  </span></a>                    @Override 
+<a name="l173"><span class="ln">173  </span></a>                    </span><span class="s0">public void </span><span class="s1">onClick(View arg0) { 
+<a name="l174"><span class="ln">174  </span></a>                        speakOut(strings[counter1]); 
+<a name="l175"><span class="ln">175  </span></a>                    } 
+<a name="l176"><span class="ln">176  </span></a> 
+<a name="l177"><span class="ln">177  </span></a>                }); 
+<a name="l178"><span class="ln">178  </span></a> 
+<a name="l179"><span class="ln">179  </span></a>            } 
+<a name="l180"><span class="ln">180  </span></a>        }); 
+<a name="l181"><span class="ln">181  </span></a> 
+<a name="l182"><span class="ln">182  </span></a>    } 
+<a name="l183"><span class="ln">183  </span></a> 
+<a name="l184"><span class="ln">184  </span></a>    @Override 
+<a name="l185"><span class="ln">185  </span></a>    </span><span class="s0">public void </span><span class="s1">onDestroy() { 
+<a name="l186"><span class="ln">186  </span></a>        </span><span class="s2">// Don't forget to shutdown tts!</span><span class="s1"> 
+<a name="l187"><span class="ln">187  </span></a>        </span><span class="s0">if </span><span class="s1">(tts != </span><span class="s0">null</span><span class="s1">) { 
+<a name="l188"><span class="ln">188  </span></a>            tts.stop(); 
+<a name="l189"><span class="ln">189  </span></a>            tts.shutdown(); 
+<a name="l190"><span class="ln">190  </span></a>        } 
+<a name="l191"><span class="ln">191  </span></a>        </span><span class="s0">super</span><span class="s1">.onDestroy(); 
+<a name="l192"><span class="ln">192  </span></a>    } 
+<a name="l193"><span class="ln">193  </span></a> 
+<a name="l194"><span class="ln">194  </span></a>    @Override 
+<a name="l195"><span class="ln">195  </span></a>    </span><span class="s0">public void </span><span class="s1">onInit(</span><span class="s0">int </span><span class="s1">status) { 
+<a name="l196"><span class="ln">196  </span></a> 
+<a name="l197"><span class="ln">197  </span></a>        </span><span class="s0">if </span><span class="s1">(status == TextToSpeech.SUCCESS) { 
+<a name="l198"><span class="ln">198  </span></a> 
+<a name="l199"><span class="ln">199  </span></a>            </span><span class="s0">int </span><span class="s1">result = tts.setLanguage(Locale.US); 
+<a name="l200"><span class="ln">200  </span></a> 
+<a name="l201"><span class="ln">201  </span></a>            </span><span class="s0">if </span><span class="s1">(result == TextToSpeech.LANG_MISSING_DATA 
+<a name="l202"><span class="ln">202  </span></a>                    || result == TextToSpeech.LANG_NOT_SUPPORTED) { 
+<a name="l203"><span class="ln">203  </span></a>                Log.e(</span><span class="s3">&quot;TTS&quot;</span><span class="s1">, </span><span class="s3">&quot;This Language is not supported&quot;</span><span class="s1">); 
+<a name="l204"><span class="ln">204  </span></a>            } </span><span class="s2">/*else { 
+<a name="l205"><span class="ln">205  </span></a>               // buttonSpeak.setEnabled(true); 
+<a name="l206"><span class="ln">206  </span></a>                speakOut(); 
+<a name="l207"><span class="ln">207  </span></a>            }*/</span><span class="s1"> 
+<a name="l208"><span class="ln">208  </span></a> 
+<a name="l209"><span class="ln">209  </span></a>        } </span><span class="s0">else </span><span class="s1">{ 
+<a name="l210"><span class="ln">210  </span></a>            Log.e(</span><span class="s3">&quot;TTS&quot;</span><span class="s1">, </span><span class="s3">&quot;Initilization Failed!&quot;</span><span class="s1">); 
+<a name="l211"><span class="ln">211  </span></a>        } 
+<a name="l212"><span class="ln">212  </span></a> 
+<a name="l213"><span class="ln">213  </span></a>    } 
+<a name="l214"><span class="ln">214  </span></a>    </span><span class="s0">private void </span><span class="s1">speakOut(String text) { 
+<a name="l215"><span class="ln">215  </span></a>        </span><span class="s2">//String text = t.getText().toString();</span><span class="s1"> 
+<a name="l216"><span class="ln">216  </span></a>        tts.speak(text, TextToSpeech.QUEUE_FLUSH, </span><span class="s0">null</span><span class="s1">); 
+<a name="l217"><span class="ln">217  </span></a>    } 
+<a name="l218"><span class="ln">218  </span></a> 
+<a name="l219"><span class="ln">219  </span></a>    @Override 
+<a name="l220"><span class="ln">220  </span></a>    </span><span class="s0">public boolean </span><span class="s1">onCreateOptionsMenu(Menu menu) { 
+<a name="l221"><span class="ln">221  </span></a>        </span><span class="s2">// Inflate the menu; this adds items to the action bar if it is present.</span><span class="s1"> 
+<a name="l222"><span class="ln">222  </span></a>        getMenuInflater().inflate(R.menu.activity1_learn, menu); 
+<a name="l223"><span class="ln">223  </span></a>        </span><span class="s0">return true</span><span class="s1">; 
+<a name="l224"><span class="ln">224  </span></a>    } 
+<a name="l225"><span class="ln">225  </span></a>    @Override 
+<a name="l226"><span class="ln">226  </span></a>    </span><span class="s0">public void </span><span class="s1">onBackPressed(){ 
+<a name="l227"><span class="ln">227  </span></a>        </span><span class="s2">// moveTaskToBack(true);</span><span class="s1"> 
+<a name="l228"><span class="ln">228  </span></a>        </span><span class="s0">super</span><span class="s1">.onBackPressed(); 
+<a name="l229"><span class="ln">229  </span></a>        startActivity(</span><span class="s0">new </span><span class="s1">Intent(LearnActivity4.</span><span class="s0">this</span><span class="s1">, <a href="LearnActivity.java.html">LearnActivity</a>.</span><span class="s0">class</span><span class="s1">)); 
+<a name="l230"><span class="ln">230  </span></a>        finish(); 
+<a name="l231"><span class="ln">231  </span></a>    } 
+<a name="l232"><span class="ln">232  </span></a> 
+<a name="l233"><span class="ln">233  </span></a>}</span></pre>
+</body>
+</html>

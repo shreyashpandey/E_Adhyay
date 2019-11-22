@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>ImageAdapter.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(0,0,255); }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+ImageAdapter.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<a name="l1"><span class="ln">1    </span></a><span class="s0">package </span><span class="s1">com.example.anonymus.e_adhyay; 
+<a name="l2"><span class="ln">2    </span></a> 
+<a name="l3"><span class="ln">3    </span></a></span><span class="s0">import </span><span class="s1">android.content.Context; 
+<a name="l4"><span class="ln">4    </span></a></span><span class="s0">import </span><span class="s1">android.support.v4.view.PagerAdapter; 
+<a name="l5"><span class="ln">5    </span></a></span><span class="s0">import </span><span class="s1">android.support.v4.view.ViewPager; 
+<a name="l6"><span class="ln">6    </span></a></span><span class="s0">import </span><span class="s1">android.view.View; 
+<a name="l7"><span class="ln">7    </span></a></span><span class="s0">import </span><span class="s1">android.view.ViewGroup; 
+<a name="l8"><span class="ln">8    </span></a></span><span class="s0">import </span><span class="s1">android.widget.ImageView; 
+<a name="l9"><span class="ln">9    </span></a> 
+<a name="l10"><span class="ln">10   </span></a></span><span class="s0">public class </span><span class="s1">ImageAdapter </span><span class="s0">extends </span><span class="s1">PagerAdapter{ 
+<a name="l11"><span class="ln">11   </span></a>    Context mContext; 
+<a name="l12"><span class="ln">12   </span></a> 
+<a name="l13"><span class="ln">13   </span></a>    ImageAdapter(Context context) { 
+<a name="l14"><span class="ln">14   </span></a>        </span><span class="s0">this</span><span class="s1">.mContext = context; 
+<a name="l15"><span class="ln">15   </span></a>    } 
+<a name="l16"><span class="ln">16   </span></a> 
+<a name="l17"><span class="ln">17   </span></a>    @Override 
+<a name="l18"><span class="ln">18   </span></a>    </span><span class="s0">public boolean </span><span class="s1">isViewFromObject(View view, Object object) { 
+<a name="l19"><span class="ln">19   </span></a>        </span><span class="s0">return </span><span class="s1">view == ((ImageView) object); 
+<a name="l20"><span class="ln">20   </span></a>    } 
+<a name="l21"><span class="ln">21   </span></a> 
+<a name="l22"><span class="ln">22   </span></a>    </span><span class="s0">private int</span><span class="s1">[] sliderImageId = </span><span class="s0">new int</span><span class="s1">[]{ 
+<a name="l23"><span class="ln">23   </span></a>            R.drawable.s1, R.drawable.s2, R.drawable.s3,R.drawable.s4, 
+<a name="l24"><span class="ln">24   </span></a>    }; 
+<a name="l25"><span class="ln">25   </span></a> 
+<a name="l26"><span class="ln">26   </span></a>    @Override 
+<a name="l27"><span class="ln">27   </span></a>    </span><span class="s0">public </span><span class="s1">Object instantiateItem(ViewGroup container, </span><span class="s0">int </span><span class="s1">position) { 
+<a name="l28"><span class="ln">28   </span></a>        ImageView imageView = </span><span class="s0">new </span><span class="s1">ImageView(mContext); 
+<a name="l29"><span class="ln">29   </span></a>        imageView.setScaleType(ImageView.ScaleType.CENTER_CROP); 
+<a name="l30"><span class="ln">30   </span></a>        imageView.setImageResource(sliderImageId[position]); 
+<a name="l31"><span class="ln">31   </span></a>        ((ViewPager) container).addView(imageView, </span><span class="s2">0</span><span class="s1">); 
+<a name="l32"><span class="ln">32   </span></a>        </span><span class="s0">return </span><span class="s1">imageView; 
+<a name="l33"><span class="ln">33   </span></a>    } 
+<a name="l34"><span class="ln">34   </span></a> 
+<a name="l35"><span class="ln">35   </span></a>    @Override 
+<a name="l36"><span class="ln">36   </span></a>    </span><span class="s0">public void </span><span class="s1">destroyItem(ViewGroup container, </span><span class="s0">int </span><span class="s1">position, Object object) { 
+<a name="l37"><span class="ln">37   </span></a>        ((ViewPager) container).removeView((ImageView) object); 
+<a name="l38"><span class="ln">38   </span></a>    } 
+<a name="l39"><span class="ln">39   </span></a> 
+<a name="l40"><span class="ln">40   </span></a>    @Override 
+<a name="l41"><span class="ln">41   </span></a>    </span><span class="s0">public int </span><span class="s1">getCount() { 
+<a name="l42"><span class="ln">42   </span></a>        </span><span class="s0">return </span><span class="s1">sliderImageId.length; 
+<a name="l43"><span class="ln">43   </span></a>    } 
+<a name="l44"><span class="ln">44   </span></a>}</span></pre>
+</body>
+</html>

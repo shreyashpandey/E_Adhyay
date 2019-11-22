@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_gravity="center"
+    tools:context=".HomeActivity"
+    android:background="@drawable/i72">
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            tools:context=".HomeActivity">
+
+
+            <!-- <pl.droidsonroids.gif.GifImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/s5"
+                />-->
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="58dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="27dp"
+                android:baselineAligned="false"
+                android:paddingBottom="20dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/i45" />
+            <RelativeLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="87dp"
+                android:layout_marginTop="20dp"
+                android:background="#2b60de">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="E-ADHYAY"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+            <!--  <ImageSwitcher
+                android:id="@+id/imageSwitcher"
+                android:layout_width="380dp"
+                android:layout_height="500dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center_horizontal" />
+
+            <ImageButton
+
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="450dp"
+                android:layout_marginLeft="142dp"
+                android:src="@drawable/r4"
+                android:layout_gravity="center_horizontal"
+                />-->
+
+            <RelativeLayout
+                android:layout_width="310dp"
+                android:layout_height="340dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="153dp"
+                android:background="@drawable/shape8">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="80dp"
+                    android:text="Lines Of Code"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="170dp"
+                    android:text="80k+"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="310dp"
+                android:layout_height="340dp"
+
+
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="620dp"
+                android:background="@drawable/shape8">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="80dp"
+                    android:text="Contact Us"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="170dp"
+                    android:text="coolesttech@gmail.com"
+                    android:textAlignment="center"
+                    android:textColor="#FFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</RelativeLayout>

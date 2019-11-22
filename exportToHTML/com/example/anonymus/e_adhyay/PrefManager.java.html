@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>PrefManager.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,128); font-weight: bold; }
+.s1 { color: rgb(0,0,0); }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,0,255); }
+.s4 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+PrefManager.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<a name="l1"><span class="ln">1    </span></a><span class="s0">package </span><span class="s1">com.example.anonymus.e_adhyay; 
+<a name="l2"><span class="ln">2    </span></a> 
+<a name="l3"><span class="ln">3    </span></a></span><span class="s0">import </span><span class="s1">android.content.Context; 
+<a name="l4"><span class="ln">4    </span></a></span><span class="s0">import </span><span class="s1">android.content.SharedPreferences; 
+<a name="l5"><span class="ln">5    </span></a> 
+<a name="l6"><span class="ln">6    </span></a></span><span class="s0">public class </span><span class="s1">PrefManager { 
+<a name="l7"><span class="ln">7    </span></a>    SharedPreferences pref; 
+<a name="l8"><span class="ln">8    </span></a>    SharedPreferences.Editor editor; 
+<a name="l9"><span class="ln">9    </span></a>    Context _context; 
+<a name="l10"><span class="ln">10   </span></a>    </span><span class="s2">// shared pref mode</span><span class="s1"> 
+<a name="l11"><span class="ln">11   </span></a>    </span><span class="s0">int </span><span class="s1">PRIVATE_MODE = </span><span class="s3">0</span><span class="s1">; 
+<a name="l12"><span class="ln">12   </span></a> 
+<a name="l13"><span class="ln">13   </span></a>    </span><span class="s2">// Shared preferences file name</span><span class="s1"> 
+<a name="l14"><span class="ln">14   </span></a>    </span><span class="s0">private static final </span><span class="s1">String PREF_NAME = </span><span class="s4">&quot;welcome&quot;</span><span class="s1">; 
+<a name="l15"><span class="ln">15   </span></a>    </span><span class="s0">private static final </span><span class="s1">String IS_FIRST_TIME_LAUNCH = </span><span class="s4">&quot;IsFirstTimeLaunch&quot;</span><span class="s1">; 
+<a name="l16"><span class="ln">16   </span></a> 
+<a name="l17"><span class="ln">17   </span></a>    </span><span class="s0">public </span><span class="s1">PrefManager(Context context) { 
+<a name="l18"><span class="ln">18   </span></a>        </span><span class="s0">this</span><span class="s1">._context = context; 
+<a name="l19"><span class="ln">19   </span></a>        pref = _context.getSharedPreferences(PREF_NAME, PRIVATE_MODE); 
+<a name="l20"><span class="ln">20   </span></a>        editor = pref.edit(); 
+<a name="l21"><span class="ln">21   </span></a>    } 
+<a name="l22"><span class="ln">22   </span></a> 
+<a name="l23"><span class="ln">23   </span></a>    </span><span class="s0">public void </span><span class="s1">setFirstTimeLaunch(</span><span class="s0">boolean </span><span class="s1">isFirstTime) { 
+<a name="l24"><span class="ln">24   </span></a>        editor.putBoolean(IS_FIRST_TIME_LAUNCH, isFirstTime); 
+<a name="l25"><span class="ln">25   </span></a>        editor.commit(); 
+<a name="l26"><span class="ln">26   </span></a>    } 
+<a name="l27"><span class="ln">27   </span></a> 
+<a name="l28"><span class="ln">28   </span></a>    </span><span class="s0">public boolean </span><span class="s1">isFirstTimeLaunch() { 
+<a name="l29"><span class="ln">29   </span></a>        </span><span class="s0">return </span><span class="s1">pref.getBoolean(IS_FIRST_TIME_LAUNCH, </span><span class="s0">true</span><span class="s1">); 
+<a name="l30"><span class="ln">30   </span></a>    } 
+<a name="l31"><span class="ln">31   </span></a>}</span></pre>
+</body>
+</html>

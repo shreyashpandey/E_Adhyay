@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".QuizActivityD2">
+    <ProgressBar
+        android:id="@+id/splashProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:layout_weight="10"
+        android:backgroundTint="#FFF"
+        android:progress="1"
+        android:max="5"/>
+
+    <TableLayout
+
+        android:id="@+id/tableLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp">
+        <TableRow
+            android:id="@+id/tableRow"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:gravity="center_horizontal" >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="384dp"
+                android:layout_height="200dp"
+
+                android:layout_marginBottom="30dp"
+
+                android:gravity="center_horizontal"
+                android:paddingTop="50dp"
+                android:text="Which of these is an alphabet ?"
+                android:textColor="#fff"
+                android:textSize="30dp"
+                android:background="@color/colorPrimary"
+                android:textStyle="bold" />
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/i1"
+                android:layout_width="26dp"
+                android:layout_height="108dp"
+                android:layout_marginRight="90dp"
+                android:layout_marginLeft="190dp"
+                android:layout_toLeftOf="@id/i2"
+                android:baselineAligned="false"
+                android:paddingBottom="20dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/b5"
+                android:background="#fff"
+                android:onClick="aa"
+                />
+            <ImageButton
+                android:id="@+id/i2"
+                android:layout_width="100dp"
+                android:layout_height="108dp"
+                android:layout_marginRight="190dp"
+                android:layout_marginLeft="0dp"
+                android:baselineAligned="false"
+                android:paddingBottom="20dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/c1"
+                android:layout_toRightOf="@id/i1"
+                android:background="#fff"
+                android:onClick="e1"/>
+
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal">
+
+            <ImageButton
+                android:id="@+id/i3"
+                android:layout_width="26dp"
+                android:layout_height="108dp"
+                android:layout_below="@id/i1"
+                android:layout_marginLeft="190dp"
+                android:layout_toLeftOf="@id/i4"
+                android:layout_marginRight="90dp"
+                android:layout_marginTop="50dp"
+                android:baselineAligned="false"
+                android:paddingBottom="20dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/c5"
+                android:background="#fff"
+                android:onClick="e1"/>
+
+            <ImageButton
+                android:id="@+id/i4"
+                android:layout_width="100dp"
+                android:layout_height="108dp"
+                android:layout_below="@id/i2"
+                android:layout_marginRight="190dp"
+                android:layout_toRightOf="@id/i3"
+                android:layout_marginTop="50dp"
+                android:baselineAligned="false"
+                android:paddingBottom="20dp"
+                android:scaleType="fitStart"
+                android:src="@drawable/c6"
+                android:background="#fff"
+                android:onClick="e1"/>
+        </TableRow>
+
+    </TableLayout>
+    <TextView
+        android:id="@+id/error"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:alpha="0.8"
+        android:background="@drawable/error"
+        android:gravity="center_horizontal"
+        android:text="Wrong Answer"
+        android:textColor="#FFF"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        android:visibility="invisible" />
+
+
+
+</RelativeLayout>

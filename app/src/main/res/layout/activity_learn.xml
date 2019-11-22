@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_gravity="center"
+    tools:context=".LearnActivity"
+    android:background="@drawable/i42">
+
+
+    <!-- <pl.droidsonroids.gif.GifImageView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:src="@drawable/s5"
+         />-->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+
+        android:layout_alignParentTop="true">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            tools:context=".LearnActivity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="10dp"
+                android:text="L E A R N"
+                android:textAlignment="center"
+                android:textColor="#FFF"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout
+                android:layout_width="310dp"
+                android:layout_height="340dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="123dp"
+                android:background="@drawable/shape13">
+
+
+                <Button
+
+                    android:id="@+id/bt_click_me"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/shape14"
+                    android:gravity="center"
+                    android:text="Easy"
+                    android:textColor="#FFF"/>
+
+                <Button
+
+                    android:id="@+id/bt_click_me1"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+
+                    android:layout_alignTop="@+id/bt_click_me"
+
+                    android:layout_marginLeft="170dp"
+                    android:background="@drawable/shape14"
+                    android:gravity="center"
+                    android:text="Medium"
+                    android:textColor="#FFF"/>
+
+
+                <!--   <TableRow>
+
+                        <Button
+
+                            android:id="@+id/bt_click_me2"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+                            android:layout_marginLeft="100dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="50dp"
+                            android:background="@drawable/shape"
+                            android:gravity="center"
+                            android:text="Info" />
+                    </TableRow>-->
+
+                <!--<TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />-->
+                <Button
+
+                    android:id="@+id/bt_click_me2"
+                    android:layout_width="115dp"
+                    android:layout_height="115dp"
+                    android:layout_marginLeft="100dp"
+
+                    android:layout_marginTop="180dp"
+                    android:background="@drawable/shape14"
+                    android:gravity="center"
+                    android:text="Hard"
+                    android:textColor="#FFF"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="500dp"
+                android:text="It is said by a great person that things aren't hard they pretend to be hard."
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>
+
+

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.anonymus.e_adhyay.QuizActivityH3"
+    android:background="#FFF"
+    >
+
+
+    <ProgressBar
+        android:id="@+id/splashProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:layout_weight="10"
+        android:backgroundTint="#FFF"
+
+        android:max="5"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="600dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="39dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:paddingTop="50dp"
+        android:text="How many legs does spider have?"
+        android:textColor="#FFF"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+
+    <!--   Customized RadioButtons  -->
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="-500dp"
+        android:layout_marginLeft="31dp">
+
+        <RadioButton
+            android:id="@+id/radioMale"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:buttonTint="#000"
+            android:checked="false"
+            android:text="Eight"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioFemale"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:buttonTint="#000"
+            android:checked="false"
+
+            android:text="Six"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioGay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:buttonTint="#000"
+            android:checked="false"
+            android:text="Three"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/radioTG"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:buttonTint="#000"
+
+            android:checked="false"
+            android:text="Two"
+            android:textColor="#000"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/button"
+        android:onClick="onclickbuttonMethod"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="510dp"
+        android:layout_marginLeft="150dp"
+        android:alpha="0.7"
+        android:background="@drawable/shape"
+        android:textStyle="bold"
+        android:textSize="20dp"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="138dp"
+        android:layout_height="150dp"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/radioGroup"
+        android:layout_marginEnd="50dp"
+        android:src="@drawable/s9" />
+
+    <TextView
+        android:id="@+id/error"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:alpha="0.8"
+        android:background="@color/error_color"
+        android:gravity="center_horizontal"
+        android:text="Wrong Answer"
+        android:textColor="#FFF"
+        android:textSize="20dp"
+        android:textStyle="normal"
+        android:visibility="invisible" />
+
+
+
+</RelativeLayout>

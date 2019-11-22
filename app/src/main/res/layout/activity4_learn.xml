@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LearnActivity1"
+    android:background="@drawable/i37"
+    android:id="@+id/r1">
+
+    <!--  <EditText
+          android:id="@+id/editText1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentTop="true"
+          android:layout_marginLeft="77dp"
+          android:layout_marginTop="42dp"
+          android:ems="10" >
+
+          <requestFocus />
+      </EditText>-->
+    <Button
+
+        android:layout_width="273dp"
+        android:layout_height="70dp"
+
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/shape6"
+        android:text="Flowers"
+        android:textSize="43dp"
+        android:textColor="#FFF"/>
+
+    <ImageButton
+        android:id="@+id/button1"
+        android:layout_width="73dp"
+        android:layout_height="37dp"
+
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="530dp"
+        android:background="@drawable/shape6"
+        android:src="@drawable/speaker" />
+
+    <RelativeLayout
+        android:layout_width="310dp"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="93dp"
+        android:background="@drawable/shape6">
+
+
+        <ImageSwitcher
+            android:id="@+id/imageSwitcher"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center" />
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="238dp"
+        android:layout_marginTop="240dp"
+
+        android:layout_weight="3"
+        android:baselineAligned="false"
+        android:paddingBottom="20dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/i40" />
+    <RelativeLayout
+        android:layout_width="310dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="443dp"
+        android:background="@drawable/shape6">
+
+        <TextSwitcher
+            android:id="@+id/simpleTextSwitcher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="center_horizontal"
+
+            android:textColor="#fff"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+    <ImageButton
+
+        android:id="@+id/button"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+
+
+        android:layout_marginLeft="40dp"
+
+        android:layout_gravity="bottom"
+        android:layout_marginTop="530dp"
+        android:layout_weight="1"
+        android:background="@drawable/shape6"
+        android:gravity="center"
+        android:src="@drawable/i35" />
+
+    <ImageButton
+
+        android:id="@+id/button2"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+
+
+        android:layout_marginLeft="280dp"
+
+
+        android:layout_gravity="bottom"
+        android:layout_marginTop="530dp"
+
+        android:layout_weight="1"
+        android:background="@drawable/shape6"
+        android:gravity="center"
+        android:src="@drawable/i36" />
+
+
+
+</RelativeLayout>

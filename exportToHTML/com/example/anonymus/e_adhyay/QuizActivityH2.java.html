@@ -1,0 +1,259 @@
+<html>
+<head>
+<title>QuizActivityH2.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.ln { color: #999999; font-weight: normal; font-style: normal; }
+.s0 { color: rgb(0,0,0); }
+.s1 { color: rgb(0,0,128); font-weight: bold; }
+.s2 { color: rgb(128,128,128); font-style: italic; }
+.s3 { color: rgb(0,0,255); }
+.s4 { color: rgb(0,128,0); font-weight: bold; }
+</style>
+</head>
+<BODY BGCOLOR="#ffffff">
+<TABLE CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#c0c0c0" >
+<TR><TD><CENTER>
+<FONT FACE="Arial, Helvetica" COLOR="#000000">
+QuizActivityH2.java</FONT>
+</center></TD></TR></TABLE>
+<pre>
+<a name="l1"><span class="ln">1    </span></a><span class="s0"> 
+<a name="l2"><span class="ln">2    </span></a></span><span class="s1">package </span><span class="s0">com.example.anonymus.e_adhyay; 
+<a name="l3"><span class="ln">3    </span></a></span><span class="s1">import </span><span class="s0">android.content.Intent; 
+<a name="l4"><span class="ln">4    </span></a></span><span class="s1">import </span><span class="s0">android.graphics.Color; 
+<a name="l5"><span class="ln">5    </span></a></span><span class="s1">import </span><span class="s0">android.os.Build; 
+<a name="l6"><span class="ln">6    </span></a></span><span class="s1">import </span><span class="s0">android.support.v7.app.AppCompatActivity; 
+<a name="l7"><span class="ln">7    </span></a></span><span class="s1">import </span><span class="s0">android.os.Bundle; 
+<a name="l8"><span class="ln">8    </span></a></span><span class="s1">import </span><span class="s0">android.view.View; 
+<a name="l9"><span class="ln">9    </span></a></span><span class="s1">import </span><span class="s0">android.view.Window; 
+<a name="l10"><span class="ln">10   </span></a></span><span class="s1">import </span><span class="s0">android.view.WindowManager; 
+<a name="l11"><span class="ln">11   </span></a></span><span class="s1">import </span><span class="s0">android.view.animation.Animation; 
+<a name="l12"><span class="ln">12   </span></a></span><span class="s1">import </span><span class="s0">android.view.animation.AnimationUtils; 
+<a name="l13"><span class="ln">13   </span></a></span><span class="s1">import </span><span class="s0">android.widget.Button; 
+<a name="l14"><span class="ln">14   </span></a> 
+<a name="l15"><span class="ln">15   </span></a></span><span class="s1">import </span><span class="s0">android.widget.ProgressBar; 
+<a name="l16"><span class="ln">16   </span></a></span><span class="s1">import </span><span class="s0">android.widget.TextView; 
+<a name="l17"><span class="ln">17   </span></a></span><span class="s1">import </span><span class="s0">android.widget.Toast; 
+<a name="l18"><span class="ln">18   </span></a> 
+<a name="l19"><span class="ln">19   </span></a></span><span class="s1">import </span><span class="s0">java.util.ArrayList; 
+<a name="l20"><span class="ln">20   </span></a></span><span class="s1">import </span><span class="s0">java.util.Random; 
+<a name="l21"><span class="ln">21   </span></a> 
+<a name="l22"><span class="ln">22   </span></a></span><span class="s1">public class </span><span class="s0">QuizActivityH2 </span><span class="s1">extends </span><span class="s0">AppCompatActivity { 
+<a name="l23"><span class="ln">23   </span></a>    Button button; 
+<a name="l24"><span class="ln">24   </span></a>    </span><span class="s2">// RadioButton genderradioButton;</span><span class="s0"> 
+<a name="l25"><span class="ln">25   </span></a>    </span><span class="s2">// RadioGroup radioGroup;</span><span class="s0"> 
+<a name="l26"><span class="ln">26   </span></a>    TextView t1; 
+<a name="l27"><span class="ln">27   </span></a>    ProgressBar p; 
+<a name="l28"><span class="ln">28   </span></a>    </span><span class="s1">int </span><span class="s0">i1; 
+<a name="l29"><span class="ln">29   </span></a> 
+<a name="l30"><span class="ln">30   </span></a>    @Override 
+<a name="l31"><span class="ln">31   </span></a>    </span><span class="s1">protected void </span><span class="s0">onCreate(Bundle savedInstanceState) { 
+<a name="l32"><span class="ln">32   </span></a>        </span><span class="s1">super</span><span class="s0">.onCreate(savedInstanceState); 
+<a name="l33"><span class="ln">33   </span></a>        </span><span class="s1">if </span><span class="s0">(Build.VERSION.SDK_INT &gt;= </span><span class="s3">21</span><span class="s0">) { 
+<a name="l34"><span class="ln">34   </span></a>            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN); 
+<a name="l35"><span class="ln">35   </span></a>        } 
+<a name="l36"><span class="ln">36   </span></a>        </span><span class="s1">if </span><span class="s0">(Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.LOLLIPOP) { 
+<a name="l37"><span class="ln">37   </span></a>            Window window = getWindow(); 
+<a name="l38"><span class="ln">38   </span></a>            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS); 
+<a name="l39"><span class="ln">39   </span></a>            window.setStatusBarColor(Color.TRANSPARENT); 
+<a name="l40"><span class="ln">40   </span></a>        } 
+<a name="l41"><span class="ln">41   </span></a>        setContentView(R.layout.activityh2_quiz); 
+<a name="l42"><span class="ln">42   </span></a>        </span><span class="s2">//radioGroup = (RadioGroup) findViewById(R.id.radioGroup);</span><span class="s0"> 
+<a name="l43"><span class="ln">43   </span></a>        t1 = (TextView) findViewById(R.id.error); 
+<a name="l44"><span class="ln">44   </span></a>        t1.setVisibility(View.INVISIBLE); 
+<a name="l45"><span class="ln">45   </span></a>        p = (ProgressBar) findViewById(R.id.splashProgress); 
+<a name="l46"><span class="ln">46   </span></a> 
+<a name="l47"><span class="ln">47   </span></a>        Intent i = getIntent(); 
+<a name="l48"><span class="ln">48   </span></a> 
+<a name="l49"><span class="ln">49   </span></a>        i1 = i.getIntExtra(</span><span class="s4">&quot;S&quot;</span><span class="s0">, </span><span class="s3">0</span><span class="s0">); 
+<a name="l50"><span class="ln">50   </span></a>        i1 += </span><span class="s3">1</span><span class="s0">; 
+<a name="l51"><span class="ln">51   </span></a> 
+<a name="l52"><span class="ln">52   </span></a>        p.setProgress(i1); 
+<a name="l53"><span class="ln">53   </span></a> 
+<a name="l54"><span class="ln">54   </span></a>    } 
+<a name="l55"><span class="ln">55   </span></a> 
+<a name="l56"><span class="ln">56   </span></a>    </span><span class="s1">public void </span><span class="s0">aa(View v) { 
+<a name="l57"><span class="ln">57   </span></a>        ArrayList&lt;Class&gt; activityList = </span><span class="s1">new </span><span class="s0">ArrayList&lt;&gt;(); 
+<a name="l58"><span class="ln">58   </span></a>        </span><span class="s2">//Intent i1=getIntent();</span><span class="s0"> 
+<a name="l59"><span class="ln">59   </span></a>        Bundle extras = getIntent().getExtras(); 
+<a name="l60"><span class="ln">60   </span></a>        activityList = (ArrayList&lt;Class&gt;) extras.get(</span><span class="s4">&quot;ACTIVITY_LIST&quot;</span><span class="s0">); 
+<a name="l61"><span class="ln">61   </span></a>        ArrayList&lt;Class&gt; activityList1 = </span><span class="s1">new </span><span class="s0">ArrayList&lt;&gt;(); 
+<a name="l62"><span class="ln">62   </span></a>        </span><span class="s2">//Intent i1=getIntent();</span><span class="s0"> 
+<a name="l63"><span class="ln">63   </span></a>        Bundle extras1 = getIntent().getExtras(); 
+<a name="l64"><span class="ln">64   </span></a>        activityList1 = (ArrayList&lt;Class&gt;) extras1.get(</span><span class="s4">&quot;ACTIVITY_LIST1&quot;</span><span class="s0">); 
+<a name="l65"><span class="ln">65   </span></a> 
+<a name="l66"><span class="ln">66   </span></a>        </span><span class="s2">//String fileName = this.getArguments().getString(&quot;image&quot;);</span><span class="s0"> 
+<a name="l67"><span class="ln">67   </span></a>        </span><span class="s2">// activityList=extras.get(String.valueOf(i1));</span><span class="s0"> 
+<a name="l68"><span class="ln">68   </span></a>          </span><span class="s2">/*  if (activityList.size() == 0) { 
+<a name="l69"><span class="ln">69   </span></a> 
+<a name="l70"><span class="ln">70   </span></a>            }*/</span><span class="s0"> 
+<a name="l71"><span class="ln">71   </span></a> 
+<a name="l72"><span class="ln">72   </span></a>        </span><span class="s2">// Now, the random number is generated between 1 and however many</span><span class="s0"> 
+<a name="l73"><span class="ln">73   </span></a>        </span><span class="s2">// activities we have remaining</span><span class="s0"> 
+<a name="l74"><span class="ln">74   </span></a>        </span><span class="s1">if </span><span class="s0">(activityList.size() == </span><span class="s3">0</span><span class="s0">) { 
+<a name="l75"><span class="ln">75   </span></a>            Intent f = </span><span class="s1">new </span><span class="s0">Intent(QuizActivityH2.</span><span class="s1">this</span><span class="s0">, <a href="QuizFinished.java.html">QuizFinished</a>.</span><span class="s1">class</span><span class="s0">); 
+<a name="l76"><span class="ln">76   </span></a>            f.putExtra(</span><span class="s4">&quot;ACTIVITY_LIST1&quot;</span><span class="s0">, activityList1); 
+<a name="l77"><span class="ln">77   </span></a>            startActivity(f); 
+<a name="l78"><span class="ln">78   </span></a>        } </span><span class="s1">else </span><span class="s0">{ 
+<a name="l79"><span class="ln">79   </span></a>            Random generator = </span><span class="s1">new </span><span class="s0">Random(); 
+<a name="l80"><span class="ln">80   </span></a>            </span><span class="s1">int </span><span class="s0">number = generator.nextInt(activityList.size()) + </span><span class="s3">1</span><span class="s0">; 
+<a name="l81"><span class="ln">81   </span></a> 
+<a name="l82"><span class="ln">82   </span></a>            Class activity = </span><span class="s1">null</span><span class="s0">; 
+<a name="l83"><span class="ln">83   </span></a> 
+<a name="l84"><span class="ln">84   </span></a>            </span><span class="s2">// Here, we are checking to see what the output of the random was</span><span class="s0"> 
+<a name="l85"><span class="ln">85   </span></a>            </span><span class="s1">switch </span><span class="s0">(number) { 
+<a name="l86"><span class="ln">86   </span></a>                </span><span class="s1">case </span><span class="s3">1</span><span class="s0">: 
+<a name="l87"><span class="ln">87   </span></a>                    </span><span class="s2">// We will open the first remaining activi  ty of the list</span><span class="s0"> 
+<a name="l88"><span class="ln">88   </span></a>                    activity = activityList.get(</span><span class="s3">0</span><span class="s0">); 
+<a name="l89"><span class="ln">89   </span></a>                    </span><span class="s2">// We will now remove that activity from the list</span><span class="s0"> 
+<a name="l90"><span class="ln">90   </span></a>                    activityList.remove(</span><span class="s3">0</span><span class="s0">); 
+<a name="l91"><span class="ln">91   </span></a>                    </span><span class="s1">break</span><span class="s0">; 
+<a name="l92"><span class="ln">92   </span></a>                </span><span class="s1">case </span><span class="s3">2</span><span class="s0">: 
+<a name="l93"><span class="ln">93   </span></a>                    </span><span class="s2">// We will open the second remaining activity of the list</span><span class="s0"> 
+<a name="l94"><span class="ln">94   </span></a>                    activity = activityList.get(</span><span class="s3">1</span><span class="s0">); 
+<a name="l95"><span class="ln">95   </span></a>                    activityList.remove(</span><span class="s3">1</span><span class="s0">); 
+<a name="l96"><span class="ln">96   </span></a>                    </span><span class="s1">break</span><span class="s0">; 
+<a name="l97"><span class="ln">97   </span></a>                </span><span class="s1">case </span><span class="s3">3</span><span class="s0">: 
+<a name="l98"><span class="ln">98   </span></a>                    </span><span class="s2">// We will open the third remaining activity of the list</span><span class="s0"> 
+<a name="l99"><span class="ln">99   </span></a>                    activity = activityList.get(</span><span class="s3">2</span><span class="s0">); 
+<a name="l100"><span class="ln">100  </span></a>                    activityList.remove(</span><span class="s3">2</span><span class="s0">); 
+<a name="l101"><span class="ln">101  </span></a>                    </span><span class="s1">break</span><span class="s0">; 
+<a name="l102"><span class="ln">102  </span></a>                </span><span class="s1">default</span><span class="s0">: 
+<a name="l103"><span class="ln">103  </span></a>                    </span><span class="s2">// We will open the fourth remaining activity of the list</span><span class="s0"> 
+<a name="l104"><span class="ln">104  </span></a>                    activity = activityList.get(</span><span class="s3">3</span><span class="s0">); 
+<a name="l105"><span class="ln">105  </span></a>                    activityList.remove(</span><span class="s3">3</span><span class="s0">); 
+<a name="l106"><span class="ln">106  </span></a>                    </span><span class="s1">break</span><span class="s0">;</span><span class="s2">// We will open the fifth remaining activity of the list</span><span class="s0"> 
+<a name="l107"><span class="ln">107  </span></a> 
+<a name="l108"><span class="ln">108  </span></a>            } 
+<a name="l109"><span class="ln">109  </span></a> 
+<a name="l110"><span class="ln">110  </span></a>            </span><span class="s2">// Note: in the above, we might not have 3 remaining activities, for example,</span><span class="s0"> 
+<a name="l111"><span class="ln">111  </span></a>            </span><span class="s2">// but it doesn't matter because that case wouldn't be called anyway,</span><span class="s0"> 
+<a name="l112"><span class="ln">112  </span></a>            </span><span class="s2">// as we have already decided that the number would be between 1 and the number of</span><span class="s0"> 
+<a name="l113"><span class="ln">113  </span></a>            </span><span class="s2">// activities left.</span><span class="s0"> 
+<a name="l114"><span class="ln">114  </span></a> 
+<a name="l115"><span class="ln">115  </span></a> 
+<a name="l116"><span class="ln">116  </span></a>            </span><span class="s2">// Starting the activity, and passing on the remaining number of activities</span><span class="s0"> 
+<a name="l117"><span class="ln">117  </span></a>            </span><span class="s2">// to the next one that is opened</span><span class="s0"> 
+<a name="l118"><span class="ln">118  </span></a> 
+<a name="l119"><span class="ln">119  </span></a>            Intent intent = </span><span class="s1">new </span><span class="s0">Intent(getBaseContext(), activity); 
+<a name="l120"><span class="ln">120  </span></a>            intent.putExtra(</span><span class="s4">&quot;ACTIVITY_LIST&quot;</span><span class="s0">, activityList); 
+<a name="l121"><span class="ln">121  </span></a>            intent.putExtra(</span><span class="s4">&quot;ACTIVITY_LIST1&quot;</span><span class="s0">, activityList1); 
+<a name="l122"><span class="ln">122  </span></a>            intent.putExtra(</span><span class="s4">&quot;S&quot;</span><span class="s0">, i1); 
+<a name="l123"><span class="ln">123  </span></a>            startActivity(intent); 
+<a name="l124"><span class="ln">124  </span></a>        } 
+<a name="l125"><span class="ln">125  </span></a>    } 
+<a name="l126"><span class="ln">126  </span></a>    </span><span class="s1">public void </span><span class="s0">e1 (View v){ 
+<a name="l127"><span class="ln">127  </span></a>        t1.setVisibility(View.VISIBLE); 
+<a name="l128"><span class="ln">128  </span></a>        Zoom(); 
+<a name="l129"><span class="ln">129  </span></a>    } 
+<a name="l130"><span class="ln">130  </span></a>    </span><span class="s1">public void </span><span class="s0">Zoom () 
+<a name="l131"><span class="ln">131  </span></a>    { 
+<a name="l132"><span class="ln">132  </span></a>        Animation a = AnimationUtils.loadAnimation(</span><span class="s1">this</span><span class="s0">, R.anim.zoom_in); 
+<a name="l133"><span class="ln">133  </span></a>        a.reset(); 
+<a name="l134"><span class="ln">134  </span></a> 
+<a name="l135"><span class="ln">135  </span></a>        t1.clearAnimation(); 
+<a name="l136"><span class="ln">136  </span></a>        t1.startAnimation(a); 
+<a name="l137"><span class="ln">137  </span></a>    } 
+<a name="l138"><span class="ln">138  </span></a> 
+<a name="l139"><span class="ln">139  </span></a>   </span><span class="s2">/* public void onclickbuttonMethod(View v) { 
+<a name="l140"><span class="ln">140  </span></a>        int selectedId = radioGroup.getCheckedRadioButtonId(); 
+<a name="l141"><span class="ln">141  </span></a> 
+<a name="l142"><span class="ln">142  </span></a>        genderradioButton = (RadioButton) findViewById(selectedId); 
+<a name="l143"><span class="ln">143  </span></a>        if (selectedId == -1) { 
+<a name="l144"><span class="ln">144  </span></a>            Toast.makeText(QuizActivity1.this, &quot;Nothing selected&quot;, Toast.LENGTH_SHORT).show(); 
+<a name="l145"><span class="ln">145  </span></a>        } else if (genderradioButton.getId() == R.id.radioMale) { 
+<a name="l146"><span class="ln">146  </span></a>            Toast.makeText(QuizActivity1.this, genderradioButton.getText(), Toast.LENGTH_SHORT).show(); 
+<a name="l147"><span class="ln">147  </span></a>            // Button myButton = (Button) findViewById(R.id.MY_BUTTON); 
+<a name="l148"><span class="ln">148  </span></a>            // myButton.setOnClickListener(new View.OnClickListener() { 
+<a name="l149"><span class="ln">149  </span></a>            // @Override 
+<a name="l150"><span class="ln">150  </span></a>            // public void onClick(View v) { 
+<a name="l151"><span class="ln">151  </span></a>            // Here, we are generating a random number 
+<a name="l152"><span class="ln">152  </span></a>            ArrayList&lt;Class&gt; activityList = new ArrayList&lt;&gt;(); 
+<a name="l153"><span class="ln">153  </span></a>            activityList.add(QuizActivity2.class); 
+<a name="l154"><span class="ln">154  </span></a>            activityList.add(QuizActivity3.class); 
+<a name="l155"><span class="ln">155  </span></a>            activityList.add(QuizActivity4.class); 
+<a name="l156"><span class="ln">156  </span></a>            activityList.add(QuizActivity5.class); 
+<a name="l157"><span class="ln">157  </span></a> 
+<a name="l158"><span class="ln">158  </span></a> 
+<a name="l159"><span class="ln">159  </span></a>            Random generator = new Random(); 
+<a name="l160"><span class="ln">160  </span></a>            int number = generator.nextInt(5) + 1; 
+<a name="l161"><span class="ln">161  </span></a> 
+<a name="l162"><span class="ln">162  </span></a>            Class activity = null; 
+<a name="l163"><span class="ln">163  </span></a> 
+<a name="l164"><span class="ln">164  </span></a>            // Here, we are checking to see what the output of the random was 
+<a name="l165"><span class="ln">165  </span></a>            switch (number) { 
+<a name="l166"><span class="ln">166  </span></a>                case 1: 
+<a name="l167"><span class="ln">167  </span></a>                    activity = QuizActivity2.class; 
+<a name="l168"><span class="ln">168  </span></a>                    // We are adding the number of the activity to the list 
+<a name="l169"><span class="ln">169  </span></a>                    activityList.remove(QuizActivity2.class); 
+<a name="l170"><span class="ln">170  </span></a>                    break; 
+<a name="l171"><span class="ln">171  </span></a>                case 2: 
+<a name="l172"><span class="ln">172  </span></a>                    activity = QuizActivity3.class; 
+<a name="l173"><span class="ln">173  </span></a>                    activityList.remove(QuizActivity3.class); 
+<a name="l174"><span class="ln">174  </span></a>                    break; 
+<a name="l175"><span class="ln">175  </span></a>                case 3: 
+<a name="l176"><span class="ln">176  </span></a>                    activity = QuizActivity4.class; 
+<a name="l177"><span class="ln">177  </span></a>                    activityList.remove(QuizActivity4.class); 
+<a name="l178"><span class="ln">178  </span></a>                    break; 
+<a name="l179"><span class="ln">179  </span></a>                case 4: 
+<a name="l180"><span class="ln">180  </span></a>                    activity = QuizActivity5.class; 
+<a name="l181"><span class="ln">181  </span></a>                    activityList.remove(QuizActivity5.class); 
+<a name="l182"><span class="ln">182  </span></a>                    break; 
+<a name="l183"><span class="ln">183  </span></a> 
+<a name="l184"><span class="ln">184  </span></a>            } 
+<a name="l185"><span class="ln">185  </span></a>            int s = 1; 
+<a name="l186"><span class="ln">186  </span></a>            // We use intents to start activities 
+<a name="l187"><span class="ln">187  </span></a>            Intent intent = new Intent(getBaseContext(), activity); 
+<a name="l188"><span class="ln">188  </span></a>            // `intent.putExtra(...)` is used to pass on extra information to the next activity 
+<a name="l189"><span class="ln">189  </span></a>            intent.putExtra(&quot;ACTIVITY_LIST&quot;, activityList); 
+<a name="l190"><span class="ln">190  </span></a>            intent.putExtra(&quot;S&quot;, s); 
+<a name="l191"><span class="ln">191  </span></a>            startActivity(intent); 
+<a name="l192"><span class="ln">192  </span></a> 
+<a name="l193"><span class="ln">193  </span></a>        } else { 
+<a name="l194"><span class="ln">194  </span></a>            t1.setVisibility(View.VISIBLE); 
+<a name="l195"><span class="ln">195  </span></a>            Zoom(); 
+<a name="l196"><span class="ln">196  </span></a> 
+<a name="l197"><span class="ln">197  </span></a>        } 
+<a name="l198"><span class="ln">198  </span></a>    } 
+<a name="l199"><span class="ln">199  </span></a>    //zoom(new View(this)); 
+<a name="l200"><span class="ln">200  </span></a>    // 
+<a name="l201"><span class="ln">201  </span></a>    // 
+<a name="l202"><span class="ln">202  </span></a>    public  void Zoom() 
+<a name="l203"><span class="ln">203  </span></a>    { 
+<a name="l204"><span class="ln">204  </span></a>        Animation a = AnimationUtils.loadAnimation(this, R.anim.zoom_in); 
+<a name="l205"><span class="ln">205  </span></a>        a.reset(); 
+<a name="l206"><span class="ln">206  </span></a> 
+<a name="l207"><span class="ln">207  </span></a>        t1.clearAnimation(); 
+<a name="l208"><span class="ln">208  </span></a>        t1.startAnimation(a); 
+<a name="l209"><span class="ln">209  </span></a>    } 
+<a name="l210"><span class="ln">210  </span></a>  /*  public void zoom(View view) 
+<a name="l211"><span class="ln">211  </span></a>    { 
+<a name="l212"><span class="ln">212  </span></a>        android.view.animation.Animation a1= AnimationUtils.loadAnimation (getApplicationContext(),R.anim.zoom_out); 
+<a name="l213"><span class="ln">213  </span></a>        button.startAnimation(a1); 
+<a name="l214"><span class="ln">214  </span></a>        a1.setRepeatMode(Animation.INFINITE); 
+<a name="l215"><span class="ln">215  </span></a>        // c++; 
+<a name="l216"><span class="ln">216  </span></a>    }*/</span><span class="s0"> 
+<a name="l217"><span class="ln">217  </span></a>      </span><span class="s2">/*  radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() 
+<a name="l218"><span class="ln">218  </span></a>        { 
+<a name="l219"><span class="ln">219  </span></a> 
+<a name="l220"><span class="ln">220  </span></a> 
+<a name="l221"><span class="ln">221  </span></a>            public void onCheckedChanged(RadioGroup group, int checkedId) { 
+<a name="l222"><span class="ln">222  </span></a>                switch(checkedId){ 
+<a name="l223"><span class="ln">223  </span></a>                    case R.id.radio0: 
+<a name="l224"><span class="ln">224  </span></a>                        // do operations specific to this selection 
+<a name="l225"><span class="ln">225  </span></a>                        break; 
+<a name="l226"><span class="ln">226  </span></a>                    case R.id.radio1: 
+<a name="l227"><span class="ln">227  </span></a>                        // do operations specific to this selection 
+<a name="l228"><span class="ln">228  </span></a>                        break; 
+<a name="l229"><span class="ln">229  </span></a>                    case R.id.radio2: 
+<a name="l230"><span class="ln">230  </span></a>                        // do operations specific to this selection 
+<a name="l231"><span class="ln">231  </span></a>                        break; 
+<a name="l232"><span class="ln">232  </span></a>                } 
+<a name="l233"><span class="ln">233  </span></a>            } 
+<a name="l234"><span class="ln">234  </span></a>        });*/</span><span class="s0"> 
+<a name="l235"><span class="ln">235  </span></a>} 
+<a name="l236"><span class="ln">236  </span></a> 
+<a name="l237"><span class="ln">237  </span></a></span></pre>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/p2">
+
+    <Button
+
+        android:id="@+id/bt1"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="00dp"
+        android:background="@drawable/shape1"
+        android:text="Dont want to attempt"
+        android:onClick="onclickbuttonMethod"
+         />
+    <Button
+
+        android:id="@+id/bt3"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginLeft="-200dp"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/shape1"
+
+
+        android:text="Finished" />
+    <Button
+
+        android:id="@+id/bt2"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="380dp"
+        android:layout_marginLeft="-200dp"
+        android:background="@drawable/shape1"
+
+
+        android:text="Want to attempt 2nd Quiz or not?"
+        android:onClick="onclickbuttonMethod1"/>
+
+</LinearLayout>
