@@ -120,7 +120,13 @@ public class LearnActivity4 extends AppCompatActivity implements
         simpleTextSwitcher.setOutAnimation(out);
 
         //text appear on start
+        buttonSpeak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                speakOut(strings[0]);
+            }
 
+        });
         simpleTextSwitcher.setText(strings[counter]);
         nextButton.setOnClickListener(new View.OnClickListener() {
             /*   @TargetApi(Build.VERSION_CODES.JELLY_BEAN)

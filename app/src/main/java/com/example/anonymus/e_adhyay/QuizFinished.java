@@ -34,9 +34,10 @@ public class QuizFinished extends AppCompatActivity {
        // int selectedId = radioGroup.getCheckedRadioButtonId();
 
 
-            Intent intent = new Intent(QuizFinished.this,QuizActivity.class);
-
-            startActivity(intent);
+        Intent intent = new Intent(getApplicationContext(), QuizActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
         }
     public void onclickbuttonMethod1(View v) {
         // int selectedId = radioGroup.getCheckedRadioButtonId();
@@ -139,8 +140,10 @@ public class QuizFinished extends AppCompatActivity {
                 "Yes",
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        startActivity(new Intent(QuizFinished.this, QuizActivity.class));
-                        finish();
+                        Intent intent = new Intent(getApplicationContext(), QuizActivity.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(intent);
                     }
                 });
 

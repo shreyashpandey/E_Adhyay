@@ -103,7 +103,7 @@ public class LearnActivity10 extends AppCompatActivity implements
                 // set the gravity of text to top and center horizontal
                 t.setGravity(Gravity.TOP | Gravity.CENTER_HORIZONTAL);
                 // set displayed text size
-                t.setTextSize(50);
+                t.setTextSize(20);
 
 
                 t.setTextColor(Color.rgb(255,255,255));
@@ -120,7 +120,13 @@ public class LearnActivity10 extends AppCompatActivity implements
         simpleTextSwitcher.setOutAnimation(out);
 
         //text appear on start
+        buttonSpeak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                speakOut(strings[0]);
+            }
 
+        });
         simpleTextSwitcher.setText(strings[counter]);
         nextButton.setOnClickListener(new View.OnClickListener() {
             /*   @TargetApi(Build.VERSION_CODES.JELLY_BEAN)

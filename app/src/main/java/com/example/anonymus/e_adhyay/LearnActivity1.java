@@ -122,6 +122,13 @@ public class LearnActivity1 extends AppCompatActivity implements
         //text appear on start
 
         simpleTextSwitcher.setText(strings[counter]);
+        buttonSpeak.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View arg0) {
+                speakOut(strings[0]);
+            }
+
+        });
         nextButton.setOnClickListener(new View.OnClickListener() {
          /*   @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
             @android.support.annotation.RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)*/
